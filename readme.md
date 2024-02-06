@@ -21,8 +21,8 @@ Ini adalah aplikasi quiz pilihan ganda sederhana yang berbasis website.
 ## Rencana Alur Pembuatan
 
 - Membuat folder proyek (✅)
-- Menyiapkan struktur proyek awal (html, css, js) ()
-- Menginisialisasi git ()
+- Menyiapkan struktur proyek awal (html, css, js) (✅)
+- Menginisialisasi git (✅)
 - Membuat Design ()
 - Mengimplementasikan Design ()
 - Membuat Script Countdwown ()
