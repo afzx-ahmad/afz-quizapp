@@ -1,4 +1,4 @@
-# AFZ-COUNTDOWN APP
+# AFZ-QUIZ APP
 
 ## Daftar Isi
 
