@@ -23,6 +23,7 @@ Ini adalah aplikasi quiz pilihan ganda sederhana yang berbasis website.
 - Membuat folder proyek (✅)
 - Menyiapkan struktur proyek awal (html, css, js) (✅)
 - Menginisialisasi git (✅)
-- Membuat Design ()
+- Membuat Design (✅)\
+  https://www.figma.com/file/ibLEwVoaIBrC9WWaAsTGIk/AFZ-QUIZAPP?type=design&node-id=15%3A2&mode=design&t=HkJGzhPOCIY1kn3L-1
 - Mengimplementasikan Design ()
 - Membuat Script Countdwown ()
