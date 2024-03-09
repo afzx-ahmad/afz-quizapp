@@ -1,3 +1,15 @@
+@font-face {
+  src: url("../fonts/OverpassMono-VariableFont_wght.ttf");
+  font-display: swap;
+  font-family: "Overpass Mono";
+}
+
+:root {
+  --primary-color: #ff8b8b;
+  --button-color: #ffd1d1;
+  --font-color: #131313;
+}
+
 *,
 *::before,
 *::after {
@@ -6,6 +18,195 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
 body {
-  background-color: yellow;
+  background-color: var(--primary-color);
+  font-family: "Overpass Mono";
+  padding: 8vh 23px 0px;
+}
+
+main {
+  background-color: white;
+  box-shadow: 3px 7px 4px 3px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 77px 70px 30%;
+  text-align: center;
+  row-gap: 6px;
+  border-radius: 20px;
+}
+
+main#startQuiz {
+  padding: 30px 25px;
+  align-items: flex-start;
+}
+
+h1.appName {
+  font-size: 1rem;
+  margin-bottom: 13px;
+}
+
+p.createdBy {
+  text-align: right;
+  font-size: 0.7rem;
+  margin-top: 30px;
+}
+
+button.firstButton {
+  background-color: var(--button-color);
+  padding: 5px 16px;
+  font-size: 0.8rem;
+  border-radius: 6.5px;
+  box-shadow: 1.5px 2px black;
+}
+
+.headerQuiz {
+  padding-bottom: 7px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+}
+
+.headerQuiz h2 {
+  font-size: 1rem;
+  text-align: left;
+  font-weight: normal;
+}
+
+.bodyQuiz {
+  width: 100%;
+}
+
+.bodyQuiz#bodyQuiz1 {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.bodyQuiz form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.bodyQuiz form input[type="text"] {
+  font-size: 1rem;
+  padding: 5px 8px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.bodyQuiz form input[type="submit"] {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 1.5px 2px black;
+  width: 30%;
+  align-self: end;
+  background-color: var(--button-color);
+}
+
+.bodyQuiz .submitAnswer {
+  align-self: flex-end;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 1.5px 2px black;
+  width: 30%;
+  align-self: end;
+  background-color: var(--button-color);
+}
+
+.bodyQuiz .questionQuiz {
+  margin-bottom: 7px;
+}
+
+.optionAnswer .option {
+  margin-bottom: 10px;
+}
+
+/* Breakpoint for tablet */
+@media only screen and (min-width: 600px) {
+  body {
+    padding: 5% 50px;
+  }
+
+  h1.appName {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 10% 30px;
+  }
+
+  main#startQuiz {
+    padding: 4rem 3rem;
+    align-items: flex-start;
+  }
+
+  p.createdBy {
+    font-size: 0.8rem;
+  }
+
+  main .welcomeIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  main #welcomeMessage {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  main button.firstButton {
+    font-size: 1.5rem;
+    padding: 1% 5%;
+  }
+}
+
+/* breakpoint for desktop */
+@media only screen and (min-width: 900px) {
+  body {
+    padding: 5% 160px;
+  }
+
+  h1.appName {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 10% 70px;
+  }
+
+  main#startQuiz {
+    padding: 4rem 3rem;
+    align-items: flex-start;
+  }
+
+  p.createdBy {
+    font-size: 1.5rem;
+  }
+
+  main .welcomeIcon {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  main #welcomeMessage {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  main button.firstButton {
+    font-size: 2rem;
+    padding: 1% 5%;
+  }
 }
