@@ -1,5 +1,5 @@
 // Object that contain user data
-const userData = {
+let userData = {
   username: "",
   currentQuestion: 0,
   score: 0,
@@ -184,6 +184,7 @@ function AddChild(element, pSection) {
       // Create a div element with class name 'headerQuiz'
       const headerQuiz = document.createElement("div");
       headerQuiz.className = "headerQuiz";
+      headerQuiz.id = "checkAnswered";
 
       // Create a h2 element
       const h2QuizHeader = document.createElement("h2");
@@ -202,7 +203,7 @@ function AddChild(element, pSection) {
 
       // Create a status incorect choice
       const statusIcon = `
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="statusIcon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M7 0C3.1325 0 0 3.1325 0 7C0 10.8675 3.1325 14 7 14C10.8675 14 14 10.8675 14 7C14 3.1325 10.8675 0 7 0ZM4.375 3.115L7 5.74L9.625 3.115L10.885 4.375L8.26 7L10.885 9.625L9.625 10.885L7 8.26L4.375 10.885L3.115 9.625L5.74 7L3.115 4.375L4.375 3.115Z" fill="black"/>
         </svg>
       `;
@@ -268,6 +269,7 @@ function AddChild(element, pSection) {
       // Create a div element with class name 'headerQuiz'
       const headerQuiz = document.createElement("div");
       headerQuiz.className = "headerQuiz";
+      headerQuiz.id = "checkAnswered";
 
       // Create a h2 element
       const h2QuizHeader = document.createElement("h2");
@@ -286,7 +288,7 @@ function AddChild(element, pSection) {
 
       // Create a status incorect choice
       const statusIcon = `
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="statusIcon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M7 0C3.1325 0 0 3.1325 0 7C0 10.8675 3.1325 14 7 14C10.8675 14 14 10.8675 14 7C14 3.1325 10.8675 0 7 0ZM10.5 3.115L11.76 4.375L6.125 10.01L3.115 7L4.375 5.74L6.125 7.49L10.5 3.115Z" fill="black"/>
         </svg>
       `;
@@ -353,16 +355,13 @@ function AddChild(element, pSection) {
       const bodyQuiz = document.createElement("div");
       bodyQuiz.className = "bodyQuiz";
 
-      // add id to 'bodyQuiz'
-      bodyQuiz.id = "bodyQuiz1";
-
       // User score section
       // Create div element and give a name userScoreContainer
       const userScoreContainer = document.createElement("div");
       userScoreContainer.className = "userScoreContainer";
 
       const resultSvg = `
-        <svg width="73" height="95" viewBox="0 0 73 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="scoreIcon" width="73" height="95" viewBox="0 0 73 95" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0V95H73V47.5H31.2857V0H0ZM41.7143 0V35.625H73L41.7143 0ZM10.4286 23.75H20.8571V35.625H10.4286V23.75ZM10.4286 47.5H20.8571V59.375H10.4286V47.5ZM10.4286 71.25H52.1429V83.125H10.4286V71.25Z" fill="#FF8B8B"/>
         </svg>
       `;
@@ -373,11 +372,11 @@ function AddChild(element, pSection) {
 
       const name = document.createElement("p");
       name.className = "usernameResult";
-      name.innerHTML = `<span style="text-weight: bold;">Name : </span>${userData.username}`;
+      name.innerHTML = `<span style="font-weight: bold;">Name : </span>${userData.username}`;
 
       const score = document.createElement("p");
       score.className = "scoreResult";
-      score.innerHTML = `<span style="text-weight: bold;">Score: </span>${Math.floor((userData.score / totalQuestion) * 100)}`;
+      score.innerHTML = `<span style="font-weight: bold;">Score: </span>${Math.floor((userData.score / totalQuestion) * 100)}`;
 
       userScore.appendChild(name);
       userScore.appendChild(score);
@@ -538,6 +537,13 @@ function EndQuiz() {
 
   const restartButton = document.querySelector("button.restartButton");
   restartButton.addEventListener("click", () => {
+    userData = {
+      username: "",
+      currentQuestion: 0,
+      score: 0,
+      userChoice: {},
+    };
+
     StartQuiz();
   });
 }

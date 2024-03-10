@@ -23,6 +23,12 @@ a {
   color: var(--font-color);
 }
 
+button {
+  padding: 1% 2%;
+  background-color: var(--button-color);
+  font-family: "Overpass Mono";
+}
+
 body {
   background-color: var(--primary-color);
   font-family: "Overpass Mono";
@@ -57,9 +63,12 @@ p.createdBy {
   margin-top: 30px;
 }
 
+#welcomeMessage {
+  margin-bottom: 0.6rem;
+}
+
 button.firstButton {
   background-color: var(--button-color);
-  padding: 5px 16px;
   font-size: 0.8rem;
   border-radius: 6.5px;
   box-shadow: 1.5px 2px black;
@@ -78,8 +87,41 @@ button.firstButton {
   font-weight: normal;
 }
 
+.headerQuiz#checkAnswered {
+  display: flex;
+  justify-content: space-between;
+}
+
+.userAnswerDes {
+  margin-bottom: 23px;
+}
+
+.userAnswerDes * {
+  margin-bottom: 2px;
+}
+
+p.currentUserChoice {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.userAnswerDes p:not(:first-child),
+.revealCorrect p:last-child {
+  margin-left: 20px;
+}
+
+.revealCorrect * {
+  margin-bottom: 2px;
+}
+
+.revealCorrect p:last-child {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 .bodyQuiz {
   width: 100%;
+  font-size: 0.9rem;
 }
 
 .bodyQuiz#bodyQuiz1 {
@@ -94,6 +136,10 @@ button.firstButton {
   text-align: left;
 }
 
+#userForm label {
+  margin-bottom: 2px;
+}
+
 .bodyQuiz form input[type="text"] {
   font-size: 1rem;
   padding: 5px 8px;
@@ -103,7 +149,7 @@ button.firstButton {
 
 .bodyQuiz form input[type="submit"] {
   font-size: 0.8rem;
-  padding: 5px 10px;
+  padding: 1% 2%;
   border-radius: 10px;
   margin-bottom: 15px;
   box-shadow: 1.5px 2px black;
@@ -113,10 +159,9 @@ button.firstButton {
 }
 
 .bodyQuiz .submitAnswer {
-  align-self: flex-end;
+  margin-top: 20px;
   font-size: 0.8rem;
   text-transform: uppercase;
-  padding: 5px 10px;
   border-radius: 10px;
   margin-bottom: 15px;
   box-shadow: 1.5px 2px black;
@@ -133,10 +178,41 @@ button.firstButton {
   margin-bottom: 10px;
 }
 
+.userScoreContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.userScore {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+button.restartButton {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding: 2% 5%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 1.5px 2px black;
+  width: 40%;
+  background-color: var(--button-color);
+}
+
 /* Breakpoint for tablet */
 @media only screen and (min-width: 600px) {
   body {
-    padding: 5% 50px;
+    padding: 10% 80px;
+  }
+
+  .welcomeIcon {
+    height: 45px;
+    width: 45px;
   }
 
   h1.appName {
@@ -152,61 +228,114 @@ button.firstButton {
     align-items: flex-start;
   }
 
-  p.createdBy {
-    font-size: 0.8rem;
+  #startQuiz h2 {
+    font-size: 1.3rem;
   }
 
-  main .welcomeIcon {
-    width: 2.5rem;
-    height: 2.5rem;
+  #userForm label {
+    margin-bottom: 5px;
   }
 
-  main #welcomeMessage {
-    font-size: 2rem;
-    margin-bottom: 10px;
+  .statusIcon {
+    height: 24px;
+    width: 24px;
   }
 
-  main button.firstButton {
-    font-size: 1.5rem;
-    padding: 1% 5%;
+  .scoreIcon {
+    height: 190px;
+    width: auto;
+  }
+
+  button.restartButton {
+    font-size: 1rem;
+  }
+
+  #welcomeMessage,
+  button.firstButton,
+  .bodyQuiz .submitAnswer,
+  .userScore,
+  #startQuiz .bodyQuiz,
+  .bodyQuiz form input[type="submit"],
+  #userForm label,
+  .bodyQuiz form input[type="text"] {
+    font-size: 1.2rem;
+  }
+
+  p.currentUserChoice,
+  .revealCorrect p:last-child {
+    font-size: 1.3rem;
+  }
+
+  .userAnswerDes p:not(:first-child),
+  .revealCorrect p:last-child {
+    margin-left: 40px;
   }
 }
 
 /* breakpoint for desktop */
 @media only screen and (min-width: 900px) {
   body {
-    padding: 5% 160px;
+    padding: 5% 10%;
+  }
+
+  .welcomeIcon {
+    height: 90px;
+    width: 90px;
   }
 
   h1.appName {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   main {
-    padding: 10% 70px;
+    padding: 10% 50px;
   }
 
   main#startQuiz {
-    padding: 4rem 3rem;
+    padding: 5rem 4rem;
     align-items: flex-start;
   }
 
-  p.createdBy {
+  #startQuiz h2 {
     font-size: 1.5rem;
   }
 
-  main .welcomeIcon {
-    width: 6rem;
-    height: 6rem;
+  #userForm label {
+    margin-bottom: 10px;
   }
 
-  main #welcomeMessage {
-    font-size: 3rem;
-    margin-bottom: 20px;
+  .statusIcon {
+    height: 24px;
+    width: 24px;
   }
 
-  main button.firstButton {
-    font-size: 2rem;
-    padding: 1% 5%;
+  .scoreIcon {
+    height: 190px;
+    width: auto;
+  }
+
+  button.restartButton {
+    font-size: 1.2rem;
+  }
+
+  #welcomeMessage,
+  button.firstButton,
+  .bodyQuiz .submitAnswer,
+  .userScore,
+  #startQuiz .bodyQuiz,
+  .bodyQuiz form input[type="submit"],
+  #userForm label,
+  .bodyQuiz form input[type="text"] {
+    font-size: 1.4rem;
+  }
+
+  p.currentUserChoice,
+  .revealCorrect p:last-child {
+    font-size: 1.5rem;
+  }
+
+  .userAnswerDes p:not(:first-child),
+  .revealCorrect p:last-child {
+    margin-left: 40px;
   }
 }

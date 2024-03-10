@@ -1,5 +1,9 @@
 # AFZ-QUIZ APP
 
+---
+
+[![SS](./SS.jpg)](https://www.figma.com/file/ibLEwVoaIBrC9WWaAsTGIk/AFZ-QUIZAPP?type=design&node-id=15%3A2&mode=design&t=HkJGzhPOCIY1kn3L-1)
+
 ## Daftar Isi
 
 - [Daftar Isi](#daftar-isi)
@@ -25,5 +29,6 @@ Ini adalah aplikasi quiz pilihan ganda sederhana yang berbasis website.
 - Menginisialisasi git (✅)
 - Membuat Design (✅)\
   https://www.figma.com/file/ibLEwVoaIBrC9WWaAsTGIk/AFZ-QUIZAPP?type=design&node-id=15%3A2&mode=design&t=HkJGzhPOCIY1kn3L-1
-- Mengimplementasikan Design ()
-- Membuat Script Countdwown ()
+- Mengimplementasikan Design (✅)
+- Membuat Script Countdwown (✅)
+- Mengatur tampilan responsive (✅)
