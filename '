@@ -25,14 +25,13 @@ a {
 
 form input[type="submit"],
 button {
-  padding: 6px 18px;
+  padding: 5px 10px;
   background-color: var(--button-color);
   font-family: "Overpass Mono";
   font-size: 0.7rem;
   border-radius: 10px;
   box-shadow: 1.5px 2px black;
   width: fit-content;
-  text-transform: uppercase;
 }
 
 .bodyQuiz .submitAnswer {
@@ -42,7 +41,6 @@ button {
 form input[type="submit"] {
   margin-top: 10px;
   align-self: end;
-  width: 20%;
 }
 
 button.restartButton {
@@ -183,12 +181,12 @@ p.currentUserChoice {
   }
 
   .welcomeIcon {
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
   }
 
   h1.appName {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   main {
@@ -218,18 +216,16 @@ p.currentUserChoice {
     width: auto;
   }
 
-  button,
-  .bodyQuiz form input[type="submit"] {
-    font-size: 1rem;
-  }
-
-  p.createdBy {
+  button.restartButton {
     font-size: 1rem;
   }
 
   #welcomeMessage,
+  button.firstButton,
+  .bodyQuiz .submitAnswer,
   .userScore,
   #startQuiz .bodyQuiz,
+  .bodyQuiz form input[type="submit"],
   #userForm label,
   .bodyQuiz form input[type="text"] {
     font-size: 1.2rem;
@@ -253,12 +249,12 @@ p.currentUserChoice {
   }
 
   .welcomeIcon {
-    height: 70px;
-    width: 70px;
+    height: 90px;
+    width: 90px;
   }
 
   h1.appName {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   main {
@@ -288,18 +284,16 @@ p.currentUserChoice {
     width: auto;
   }
 
-  button,
-  .bodyQuiz form input[type="submit"] {
-    font-size: 1.2rem;
-  }
-
-  p.createdBy {
+  button.restartButton {
     font-size: 1.2rem;
   }
 
   #welcomeMessage,
+  button.firstButton,
+  .bodyQuiz .submitAnswer,
   .userScore,
   #startQuiz .bodyQuiz,
+  .bodyQuiz form input[type="submit"],
   #userForm label,
   .bodyQuiz form input[type="text"] {
     font-size: 1.4rem;
